@@ -1,6 +1,6 @@
 import "@picocss/pico";
 import modules from "./page.module.css";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 
 interface ICountry {
@@ -49,9 +49,9 @@ export default async function Countries() {
 
   return (
     <div className={modules.maincontainer}>
-      <Sidebar />
+      {/* <Sidebar /> */}
 
-      <Navbar />
+      <Header />
 
       {/* <table>
         {countries.map((country) => {

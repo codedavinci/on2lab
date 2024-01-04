@@ -1,30 +1,51 @@
-.nav {
-    height: 60px;
-    width: 85%;
-    border-bottom: 1.5px solid black;
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    background: transparent;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    z-index: 100;
 }
 
-.navitemscontainer {
-    display: flex;
-
-    border: 1px solid blue;
-    padding: 0;
+.logo  {
+    font-size: 32px;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
 }
 
-.navitem {
-    border: 1px solid green;
-    list-style-type: none;
-    padding: 0 20px;
+.nav a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
 }
 
+.nav a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+.nav a:hover::before {
+    width: 100%; 
+}
 
 /**Sidebar**/
 
 .sidebar {
-    height: 100vh;
+    height: 100%;
     width: 100px;
     border-right: 1.5px solid black;
     display: flex;
@@ -34,5 +55,4 @@
 .nametitle {
     writing-mode: vertical-rl;
     text-orientation: upright;
-    padding-top: 60px;
 }
