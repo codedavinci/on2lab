@@ -1,3 +1,9 @@
+import Header from "../components/Header";
+
 export default function Products() {
-  return <h1>products</h1>;
+  return (
+    <div className="p-3">
+      <Header />
+    </div>
+  );
 }

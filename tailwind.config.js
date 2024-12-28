@@ -7,7 +7,12 @@ export default {
     themes: ['light', 'winter', 'night']
   },
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif']
+      }
+    },
   },
   plugins: [
     require('daisyui'),
