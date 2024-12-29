@@ -1,48 +1,24 @@
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
-import Card from "../components/Card";
-
-const Data = [
-  {
-    id: 1,
-    name: "Drop-in",
-    price: 25,
-    description: "This product is valid for a single class (1 hour)",
-  },
-  {
-    id: 1,
-    name: "4 Hour Package",
-    price: 80,
-    description: "This product is valid for 30 days",
-  },
-  {
-    id: 1,
-    name: "8 Hour Package",
-    price: 150,
-    description: "This product is valid for 30 days",
-  },
-  {
-    id: 1,
-    name: "8 Hour Newcomer Package",
-    price: 140,
-    validFor: "Deal",
-    description: "This product is valid for 60 days",
-  },
-  {
-    id: 1,
-    name: "1 month - Unlimited",
-    price: 180,
-    description: "This product is valid for 30 days",
-  },
-  {
-    id: 1,
-    name: "2 month - Unlimited",
-    price: 320,
-    validFor: "Deal",
-    description: "This product is valid for 60 days",
-  },
-];
+import ProductCard from "../components/Product";
+import { Product } from "../types ";
+import { getProducts } from "../api/products";
 
 export default function Products() {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      const _products = await getProducts();
+
+      console.log(_products);
+
+      setProducts(_products);
+    }
+
+    fetchProducts();
+  }, []);
+
   return (
     <div className="p-3">
       <Header />
@@ -54,8 +30,8 @@ export default function Products() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
-          {Data.map((product) => {
-            return <Card {...product} />;
+          {products.map((product: Product) => {
+            return <ProductCard product={product} />;
           })}
         </div>
       </div>

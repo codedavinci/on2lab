@@ -1,13 +1,10 @@
+import { Product } from "../types ";
 type CardProps = {
-  validFor?: string;
-  name: string;
-  id: number;
-  price: number;
-  description: string;
+  product: Product;
 };
 
-export default function Card(props: CardProps) {
-  const { validFor, name, price, description } = props;
+export default function ProductCard(props: CardProps) {
+  const { validFor, name, price, description } = props.product;
 
   return (
     <div className="card bg-base-100 w-full sm:w-80 md:w-96 lg:w-96 shadow-xl">
