@@ -28,7 +28,6 @@ const events = [
 const UpcomingEvents = () => {
   return (
     <div className="p-4 max-w-4xl mx-auto">
-      <h2 className="text-3xl font-bold mb-6 text-center">Upcoming Events</h2>
       <div className="space-y-4">
         {events.map((event) => (
           <div
