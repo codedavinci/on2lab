@@ -63,11 +63,11 @@ const events: Event[] = [
 function colorByLevel(level: string) {
   switch (level) {
     case "Open level":
-      return "purple-500";
+      return "bg-purple-500";
     case "Intermediate":
-      return "orange-500";
+      return "bg-orange-500";
     case "Advanced":
-      return "red-600 ";
+      return "bg-red-600 ";
   }
 }
 
@@ -129,7 +129,7 @@ const UpcomingMeetings: React.FC = () => {
             </div>
             <div className="w-[130px]">
               <button
-                className={`btn btn-block bg-${colorByLevel(
+                className={`btn btn-block ${colorByLevel(
                   event.level
                 )} rounded-full hidden md:block`}
               >
