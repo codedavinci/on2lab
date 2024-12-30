@@ -5,7 +5,7 @@ export default function Menu() {
     <ul className="menu menu-horizontal px-1">
       <li>
         <Link
-          className="text-xl font-roboto text-secondary font-semibold hover:text-secondary rounded-full"
+          className=" font-poppins text-xl  text-secondary font-semibold hover:text-secondary rounded-full"
           to="/classes"
         >
           CLASSES
@@ -13,7 +13,7 @@ export default function Menu() {
       </li>
       <li>
         <Link
-          className="text-xl font-roboto  text-secondary font-semibold hover:text-secondary rounded-full"
+          className="font-poppins text-xl  text-secondary font-semibold hover:text-secondary rounded-full"
           to="/prices"
         >
           PRICES
@@ -21,7 +21,7 @@ export default function Menu() {
       </li>
       <li>
         <Link
-          className="text-xl font-roboto  text-secondary font-semibold hover:text-secondary rounded-full"
+          className="font-poppins text-xl text-secondary font-semibold hover:text-secondary rounded-full"
           to="/About"
         >
           ABOUT

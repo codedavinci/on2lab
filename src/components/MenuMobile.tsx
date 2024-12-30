@@ -25,7 +25,9 @@ export default function MenuMobile() {
       >
         <li>
           <Link
-            className="text-lg
+            className="
+            font-poppins
+            text-lg
             font-semibold
             hover:text-secondary
             rounded-full"
@@ -36,7 +38,9 @@ export default function MenuMobile() {
         </li>
         <li>
           <Link
-            className="text-lg
+            className="
+            font-poppins
+            text-lg
             font-semibold
             hover:text-secondary
             rounded-full"
@@ -47,7 +51,9 @@ export default function MenuMobile() {
         </li>
         <li>
           <Link
-            className="text-lg
+            className="
+            font-poppins
+            text-lg
              font-semibold
              hover:text-secondary
              rounded-full"
