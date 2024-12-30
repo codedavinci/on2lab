@@ -4,4 +4,5 @@ export type Product = {
   id: number;
   price: number;
   description: string;
+  paymentLink: string;
 };

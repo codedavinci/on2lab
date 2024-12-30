@@ -4,7 +4,7 @@ type CardProps = {
 };
 
 export default function ProductCard(props: CardProps) {
-  const { validFor, name, price, description } = props.product;
+  const { validFor, name, price, description, paymentLink } = props.product;
 
   return (
     <div className="card bg-base-100 w-full sm:w-80 md:w-96 lg:w-96 shadow-xl">
@@ -29,9 +29,13 @@ export default function ProductCard(props: CardProps) {
           <div className="text-3xl md:text-5xl text-black font-bold tracking-tighter">
             ${price}
           </div>
-          <button className="btn btn-primary text-sm rounded-full px-4 py-2 sm:text-base md:btn-md lg:text-lg">
+          <a
+            target="_blank"
+            href={paymentLink}
+            className="btn btn-primary text-sm rounded-full px-4 py-2 sm:text-base md:btn-md lg:text-lg"
+          >
             <p className="text-white">BUY NOW</p>
-          </button>
+          </a>
         </div>
       </div>
     </div>
