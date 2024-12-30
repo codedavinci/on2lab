@@ -49,7 +49,7 @@ export default function MenuMobile() {
             Prices
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             className="
             font-poppins
@@ -61,7 +61,7 @@ export default function MenuMobile() {
           >
             About
           </Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

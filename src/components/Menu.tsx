@@ -19,14 +19,14 @@ export default function Menu() {
           PRICES
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link
           className="font-poppins text-xl text-secondary font-semibold hover:text-secondary rounded-full"
           to="/About"
         >
-          ABOUT
+          ABOUT US
         </Link>
-      </li>
+      </li> */}
     </ul>
   );
 }
