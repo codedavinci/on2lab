@@ -51,7 +51,7 @@ const events: Event[] = [
   {
     id: 4,
     name: "Eddie Henrique",
-    schedule: "Every Tuesday 6PM - 7PM",
+    schedule: "Every Thursday 10PM - 11PM",
     location: "805 Dovercourt Rd - 2nd Floor",
     avatar:
       "https://on2-lab-storage.s3.us-east-2.amazonaws.com/eddiehenrique.jpg",
@@ -103,7 +103,7 @@ const UpcomingMeetings: React.FC = () => {
                       className="text-gray-600"
                     />
                     <span>{event.schedule}</span>
-                    <div className="h-4 w-px bg-gray-300 mx-4 hidden md:block"></div>
+                    <div className="h-5 w-[2px] bg-gray-300 mx-4 hidden md:block"></div>
 
                     <FontAwesomeIcon
                       icon={faMapMarkerAlt}
