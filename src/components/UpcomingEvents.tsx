@@ -1,51 +1,140 @@
-const events = [
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCalendarAlt,
+  faMapMarkerAlt,
+  faUser,
+  faGauge,
+} from "@fortawesome/free-solid-svg-icons";
+
+interface Event {
+  id: number;
+  name: string;
+  schedule: string;
+  location: string;
+  avatar: string;
+  className?: string;
+  level: string;
+}
+
+const events: Event[] = [
   {
     id: 1,
-    avatar: "https://via.placeholder.com/48",
-    title: "Salsa Night",
-    location: "Downtown Studio",
-    date: "2024-01-15",
-    time: "7:00 PM",
+    name: "Eddie Henrique",
+    schedule: "Every Tuesday 6PM - 7PM",
+    location: "805 Dovercourt Rd - 2nd Floor",
+    avatar:
+      "https://on2-lab-storage.s3.us-east-2.amazonaws.com/eddiehenrique.jpg",
+    className: "Salsa Foundations",
+    level: "Open level",
   },
   {
     id: 2,
-    avatar: "https://via.placeholder.com/48",
-    title: "Pachanga Workshop",
-    location: "City Center Hall",
-    date: "2024-01-20",
-    time: "6:00 PM",
+    name: "Eddie Henrique",
+    schedule: "Every Tuesday 7PM - 8PM",
+    location: "805 Dovercourt Rd - 2nd Floor",
+    avatar:
+      "https://on2-lab-storage.s3.us-east-2.amazonaws.com/eddiehenrique.jpg",
+    className: "Salsa Partnerwork & Footwork",
+    level: "Intermediate",
   },
   {
     id: 3,
-    avatar: "https://via.placeholder.com/48",
-    title: "Mambo Marathon",
-    location: "Community Hall",
-    date: "2024-01-25",
-    time: "5:30 PM",
+    name: "Eddie Henrique",
+    schedule: "Every Thursday 9PM - 10PM",
+    location: "805 Dovercourt Rd - 2nd Floor",
+    avatar:
+      "https://on2-lab-storage.s3.us-east-2.amazonaws.com/eddiehenrique.jpg",
+    className: "Salsa Partnerwork",
+    level: "Intermediate",
+  },
+  {
+    id: 4,
+    name: "Eddie Henrique",
+    schedule: "Every Tuesday 6PM - 7PM",
+    location: "805 Dovercourt Rd - 2nd Floor",
+    avatar:
+      "https://on2-lab-storage.s3.us-east-2.amazonaws.com/eddiehenrique.jpg",
+    className: "Salsa Foundations",
+    level: "Advanced",
   },
 ];
 
-const UpcomingEvents = () => {
+function colorByLevel(level: string) {
+  switch (level) {
+    case "Open level":
+      return "purple-500";
+    case "Intermediate":
+      return "orange-500";
+    case "Advanced":
+      return "red-600 ";
+  }
+}
+
+const UpcomingMeetings: React.FC = () => {
   return (
-    <div className="p-4 max-w-4xl mx-auto">
-      <div className="space-y-4">
+    <div className="max-w-5xl mx-auto p-4">
+      <div className="divide-y divide-gray-300">
         {events.map((event) => (
           <div
             key={event.id}
-            className="flex items-center bg-base-100 shadow-lg rounded-lg p-4"
+            className="flex flex-col md:flex-row justify-between items-start md:items-center py-6 space-y-4 md:space-y-0"
           >
-            <div className="avatar flex-shrink-0 mr-4">
-              <div className="w-12 rounded-full">
-                <img src={event.avatar} alt={event.title} />
+            {/* Avatar and Details */}
+            <div className="flex items-center space-x-6 md:space-x-8">
+              <img
+                src={event.avatar}
+                alt={event.name}
+                className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover"
+              />
+              <div>
+                <h2 className="text-lg md:text-2xl font-semibold">
+                  {event.className}
+                </h2>
+
+                <div className="text-sm md:text-base text-gray-500 space-y-1">
+                  <div className="flex items-center space-x-2">
+                    <FontAwesomeIcon icon={faUser} className="text-gray-600" />
+                    <span>{event.name}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <FontAwesomeIcon
+                      icon={faCalendarAlt}
+                      className="text-gray-600"
+                    />
+                    <span>{event.schedule}</span>
+                    <div className="h-4 w-px bg-gray-300 mx-4 hidden md:block"></div>
+
+                    <FontAwesomeIcon
+                      icon={faMapMarkerAlt}
+                      className="text-gray-600 hidden md:block"
+                    />
+                    <span className="hidden md:block">{event.location}</span>
+                  </div>
+
+                  <div className="flex items-center space-x-2 md:hidden ">
+                    <FontAwesomeIcon
+                      icon={faMapMarkerAlt}
+                      className="text-gray-600"
+                    />
+                    <span>{event.location}</span>
+                  </div>
+
+                  <div className="flex items-center space-x-2 md:hidden ">
+                    <FontAwesomeIcon icon={faGauge} className="text-gray-600" />
+                    <p className={`font-semibold`}>{event.level}</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold">{event.title}</h3>
-              <p className="text-sm text-gray-600">{event.location}</p>
-            </div>
-            <div className="text-right">
-              <p className="text-sm text-gray-500">{event.date}</p>
-              <p className="text-sm font-bold">{event.time}</p>
+            <div className="w-[130px]">
+              <button
+                className={`btn btn-block bg-${colorByLevel(
+                  event.level
+                )} rounded-full hidden md:block`}
+              >
+                <p className="text-white">{event.level}</p>
+              </button>
             </div>
           </div>
         ))}
@@ -54,4 +143,4 @@ const UpcomingEvents = () => {
   );
 };
 
-export default UpcomingEvents;
+export default UpcomingMeetings;
