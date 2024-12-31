@@ -55,7 +55,7 @@ const events: Event[] = [
     location: "805 Dovercourt Rd - 2nd Floor",
     avatar:
       "https://on2-lab-storage.s3.us-east-2.amazonaws.com/eddiehenrique.jpg",
-    className: "Salsa Foundations",
+    className: "Salsa Fireography",
     level: "Advanced",
   },
 ];
