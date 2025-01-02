@@ -7,18 +7,6 @@ import Schedule from "./pages/Classes";
 import About from "./pages/About";
 
 export default function App() {
-  useEffect(() => {
-    async function fetchData() {
-      const data = await (
-        await fetch(import.meta.env.VITE_API_BASE_URL)
-      ).json();
-
-      console.log(data);
-    }
-
-    fetchData();
-  });
-
   return (
     <Router>
       <div className="bg-base-200 min-h-screen">

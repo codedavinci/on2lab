@@ -28,7 +28,7 @@ function Classes({ classes }: ClassesProps) {
       <div className="divide-y divide-gray-300">
         {classes.map((_class) => (
           <div
-            key={_class.id}
+            key={_class._id}
             className="flex flex-col md:flex-row justify-between items-start md:items-center py-6 space-y-4 md:space-y-0"
           >
             {/* Avatar and Details */}

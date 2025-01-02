@@ -1,14 +1,14 @@
 export type Product = {
   validFor?: string;
   name: string;
-  id: number;
+  _id: number;
   price: number;
   description: string;
   paymentLink: string;
 };
 
 export type IClass = {
-  id: string;
+  _id: string;
   teacher: string;
   schedule: string;
   location: string;
