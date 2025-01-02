@@ -6,3 +6,13 @@ export type Product = {
   description: string;
   paymentLink: string;
 };
+
+export type IClass = {
+  id: string;
+  teacher: string;
+  schedule: string;
+  location: string;
+  photo: string;
+  className: string;
+  level: string;
+};

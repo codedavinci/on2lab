@@ -1,7 +1,23 @@
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
-import Events from "../components/UpcomingEvents";
+import Events from "../components/ClasseSchedule";
+import { IClass } from "../types ";
+
+import { getClasses } from "../api";
 
 export default function products() {
+  const [classes, setClasses] = useState<IClass[]>([]);
+
+  useEffect(() => {
+    async function fetchClasses() {
+      const classes = await getClasses();
+
+      setClasses(classes);
+    }
+
+    fetchClasses();
+  }, []);
+
   return (
     <div className="p-3">
       <Header />
@@ -14,7 +30,7 @@ export default function products() {
           </h2>
         </div>
         <div className="">
-          <Events />
+          <Events classes={classes} />
         </div>
       </div>
     </div>
