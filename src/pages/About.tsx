@@ -5,7 +5,8 @@ export default function About() {
     <div className="p-3">
       <Header />
       <div>
-        {/* About Section */}
+        {/* About Section  just a test
+         */}
         <section id="about" className="py-16 px-6 lg:px-32 bg-white">
           <div className="container mx-auto text-center">
             <h2 className="text-4xl font-semibold text-blue-600 mb-4">
@@ -63,7 +64,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* Call to Action */}
             <div className="mt-8">
               <a href="#contact" className="btn btn-secondary">
                 Get in Touch
