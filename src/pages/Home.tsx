@@ -1,4 +1,6 @@
 import Hero from "../components/Hero";
+
+import Stats from "../components/Stats";
 import Header from "../components/Header";
 import bg from "../assets/bg.jpg";
 
@@ -15,6 +17,7 @@ export default function Home() {
       <div className="relative z-10">
         <Header />
         <Hero />
+        {/* <Stats /> */}
       </div>
     </div>
   );
