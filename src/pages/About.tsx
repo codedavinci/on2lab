@@ -7,7 +7,7 @@ export default function About() {
       <div>
         {/* About Section  just a test
          */}
-        <section id="about" className="py-16 px-6 lg:px-32 bg-white">
+        <section id="about" className="py-16 px-6 lg:px-32">
           <div className="container mx-auto text-center">
             <h2 className="text-4xl font-semibold text-blue-600 mb-4">
               About Us

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
-import Events from "../components/ClasseSchedule";
+import Events from "../components/Events";
 import { IClass } from "../types ";
 
 import { getClasses } from "../api";
