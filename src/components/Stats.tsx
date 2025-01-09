@@ -13,7 +13,7 @@ export default function Hero() {
           {stats.map((s) => {
             return (
               <div>
-                <h1 className="mb-2 font-poppins font-semibold text-white text-center tracking-tighter text-5xl sm:text-6xl md:text-5xl lg:text-xl xl:text-8xl">
+                <h1 className="mb-2 font-poppins font-semibold text-secondary text-center tracking-tighter text-5xl sm:text-6xl md:text-5xl lg:text-xl xl:text-8xl">
                   {s.stat}
                 </h1>
                 <p className="font-poppins text-bold text-white text-md">
